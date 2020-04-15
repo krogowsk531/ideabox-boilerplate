@@ -17,6 +17,7 @@ showStarredButton.addEventListener("click", showButtonHandler);
 bodyElement.addEventListener("click", dropNavMenu);
 saveButton.addEventListener("click", saveHandler);
 form.addEventListener("input", enableSubmitButton);
+ideaCardsGrid.addEventListener("click", gridHandler);
 
 function toggleHiddenMenu() {
     document.querySelector(".bottom-menu-4").classList.toggle("hidden-small");
@@ -95,23 +96,29 @@ function createIdeaHtml(ideaObject) {
   </div>`
 }
 
-ideaCardsGrid.addEventListener("click", function(event) {
+function gridHandler(event) {
   var clickedElement = event.target.closest(".idea-cards");
   var targetClass = event.target.classList;
-  if (targetClass.contains("delete-white")){
-     deleteCard(clickedElement);
+  deleteDomElement(clickedElement, targetClass);
+  changeDomStar(clickedElement, targetClass, event);
+}
+function deleteDomElement(clicked, target) {
+  if (target.contains("delete-white")){
+     deleteCard(clicked);
   }
-  if (targetClass.contains("red-star")) {
-    targetClass.toggle("star-active");
-    starIdea(clickedElement.id);
-    if (targetClass.contains("star-active")){
+}
+function changeDomStar(clicked, target, event) {
+  if (target.contains("red-star")) {
+    target.toggle("star-active");
+    starIdea(clicked.id);
+    if (target.contains("star-active")){
       event.target.src = "assets/star-active.svg";
     } else {
       event.target.src = "assets/star.svg";
     }
   }
-})
-
+}
+            
 function deleteCard(element) {
   retrieveFromStorage();
   var id = element.id;
