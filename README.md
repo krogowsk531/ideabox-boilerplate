@@ -30,18 +30,16 @@ This was a group project that was designed to create idea cards while using mobi
 * Teamwork that lead to professional development growth.
 * All functionality is working through Iteration 4.
 
-
-
 **Programming Languages Used**
 
-* HTML
-* CSS
-* JavaScript
+HTML
+CSS
+JavaScript
 
 **Other Important Features Implemented**
 
-* Media queries
-* Local storage
+Media queries
+Local storage
 
 ## In Action
 
@@ -59,3 +57,4 @@ This was a group project that was designed to create idea cards while using mobi
 ![Desktop Layout](https://frontend.turing.io/projects/module-1/assets/ideabox-group/desktop.jpg)
 ![Mobile View 1](https://frontend.turing.io/projects/module-1/assets/ideabox-group/mobile.jpg)
 ![Mobile View 2](https://frontend.turing.io/projects/module-1/assets/ideabox-group/mobile-dropdown.jpg)
+
