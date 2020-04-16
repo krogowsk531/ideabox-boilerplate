@@ -96,7 +96,6 @@ body {
 
 .idea-form {
   flex-grow: 2;
-  /* background-color: grey; */
   /* padding-left: 30%; */
 }
 
@@ -132,7 +131,7 @@ form {
   border: 1px solid #353567;
   height: 30px;
   margin: 0px;
-  background-color: #1F1F3D;
+  background-color: #5356A4;
   border-radius: 1px;
   color: #E9E9F3;
   grid-row-start: 5;
@@ -178,11 +177,10 @@ label {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   padding: 20px;
-  /* background-color: grey; */
 }
 
 .idea-cards {
-  border: 2px solid #1F1F3D;
+  border: 2px solid #6E646B;
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -200,12 +198,6 @@ label {
 }
 
 .red-star {
-  height: 35px;
-  width: 35px;
-}
-
-.red-star-active {
-  display: flex;
   height: 35px;
   width: 35px;
 }
@@ -234,13 +226,14 @@ label {
 } */
 
 #searchbar {
-  margin-left: 15px;
+  margin-left: 25px;
   margin-bottom: 10px;
 }
   /* position: fixed; */
 
 
 .idea-top {
+  border: 1px solid #6E646B;
   background-color: #1F1F3D;
   display: flex;
   justify-content: space-between;
@@ -329,6 +322,7 @@ label {
 
   .form-grid {
     grid-template-columns: auto;
+    /* opacity: 30%; */
   }
 
   .show-starred {
@@ -337,6 +331,7 @@ label {
 
   form {
     grid-column-start: 1;
+
   }
 
   .hidden-small {
@@ -360,7 +355,8 @@ label {
     width: 100%;
     background-color: #1F1F3D;
     color: #BFBFDD;
-    z-index: 1;
   }
+
+
 
 }
