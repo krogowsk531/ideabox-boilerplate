@@ -11,6 +11,7 @@ var saveButton = document.querySelector(".save-button");
 var titleInput = document.querySelector(".title-box");
 var bodyInput = document.getElementById("body-input-box");
 var ideaCardsGrid = document.querySelector(".idea-cards-grid");
+var searchbar = document.getElementById("searchbar");
 var savedIdeasArray = [];
 
 showStarredButton.addEventListener("click", showButtonHandler);
@@ -18,9 +19,27 @@ bodyElement.addEventListener("click", dropNavMenu);
 saveButton.addEventListener("click", saveHandler);
 form.addEventListener("input", enableSubmitButton);
 ideaCardsGrid.addEventListener("click", gridHandler);
+searchbar.addEventListener("input", showInputFinder);
+
+function searchForIdeas(searchBarInput) {
+  var searchArrayForIdeas = [];
+  for (var i = 0; i < savedIdeasArray.length; i++) {
+      var searchBarIdeas = savedIdeasArray[i];
+      if (searchBarIdeas.body.includes(searchBarInput) || searchBarIdeas.title.includes(searchBarInput)) {
+      searchArrayForIdeas.push(searchBarIdeas);
+      }
+  }
+      return searchArrayForIdeas;
+}
+
+function showInputFinder () {
+  var searchBarInput = searchbar.value;
+  var foundIdeas = searchForIdeas(searchBarInput);
+  updatePageHtml(foundIdeas);
+}
 
 function toggleHiddenMenu() {
-    document.querySelector(".bottom-menu-4").classList.toggle("hidden-small");
+  document.querySelector(".bottom-menu-4").classList.toggle("hidden-small");
 }
 
 function saveHandler(event) {
@@ -102,11 +121,13 @@ function gridHandler(event) {
   deleteDomElement(clickedElement, targetClass);
   changeDomStar(clickedElement, targetClass, event);
 }
+
 function deleteDomElement(clicked, target) {
   if (target.contains("delete-white")){
      deleteCard(clicked);
   }
 }
+
 function changeDomStar(clicked, target, event) {
   if (target.contains("red-star")) {
     target.toggle("star-active");
@@ -118,7 +139,7 @@ function changeDomStar(clicked, target, event) {
     }
   }
 }
-            
+
 function deleteCard(element) {
   retrieveFromStorage();
   var id = element.id;
@@ -163,12 +184,12 @@ function dropNavMenu(event) {
 
 function saveToStorage() {
   localStorage.clear();
-  localStorage.setItem('savedIdeasArray', JSON.stringify(savedIdeasArray));
+  localStorage.setItem("savedIdeasArray", JSON.stringify(savedIdeasArray));
   updatePageHtml(savedIdeasArray);
 }
 
 function retrieveFromStorage() {
-  savedIdeasArray = JSON.parse(localStorage.getItem('savedIdeasArray')) || [];
+  savedIdeasArray = JSON.parse(localStorage.getItem("savedIdeasArray")) || [];
   for(var i = 0; i < savedIdeasArray.length; i++) {
     var currentIdea = savedIdeasArray[i];
     var reinstatedIdea = new Idea(currentIdea.id, currentIdea.title, currentIdea.body, currentIdea.star);

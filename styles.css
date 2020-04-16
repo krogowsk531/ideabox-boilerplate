@@ -144,7 +144,6 @@ label {
   grid-column-end: 3;
   height: 18px;
   margin-left: 29px;
-
 }
 
 .ideas {
@@ -184,12 +183,6 @@ label {
   width: 35px;
 }
 
-.red-star-active {
-  display: flex;
-  height: 35px;
-  width: 35px;
-}
-
 .comment-circle {
   height: 35px;
   width: 35px;
@@ -213,6 +206,7 @@ label {
 } */
 
 .idea-top {
+  border: 1px solid #6E646B;
   background-color: #1F1F3D;
   display: flex;
   justify-content: space-between;
@@ -303,6 +297,7 @@ label {
   }
   .form-grid {
     grid-template-columns: auto;
+    /* opacity: 30%; */
   }
   .show-starred {
     margin-left: 20px;

@@ -35,7 +35,7 @@ class Idea {
     this.retrieveFromLocalStorage();
     for(var i = 0; i < savedIdeasArray.length; i++) {
       if (savedIdeasArray[i].id === id) {
-        savedIdeasArray.splice(i, 1); 
+        savedIdeasArray.splice(i, 1);
         var updatedIdea = new Idea(id, title, body, star)
         savedIdeasArray.push(updatedIdea);
         updatedIdea.saveToLocalStorage();
