@@ -25,10 +25,10 @@ This was a group project that was designed to create idea cards while using mobi
 
 **Wins**
 
-A good, respectful working partnership.
-Completed base requirements for the project.
-Attempted to add extensions including single randomization of posters and local storage.
-Refactoring was successful on many of our more complicated functions.
+* Working with CSS and JS in a collaborative environment while working under deadlines.
+* Learning and managing local storage.
+* Teamwork that lead to professional development growth.
+* All functionality is working through Iteration 4.
 
 **Programming Languages Used**
 
@@ -45,11 +45,16 @@ Local storage
 
 **Functionality of Main Screen**
 
-![Button Functionality](https://media.giphy.com/media/H3vZ6FCP4PzbmhwnoM/giphy.gif)
+![Main Screen Functionality](https://media.giphy.com/media/eIyn0w3IjEfBRgjsa0/giphy.gif)
+
+**Functionality of Mobile Screen**
+
+![Mobile Functionality](https://media.giphy.com/media/WtZrv72Uv1zdUURBQr/giphy.gif)
 
 
 ## Comps Given
 
-![Main Screen Comp](ideabox/comp-main.png)
-![Mobile View 1](ideabox/media1.png)
-![Mobile View 2](ideabox/media2.png)
+![Desktop Layout](https://frontend.turing.io/projects/module-1/assets/ideabox-group/desktop.jpg)
+![Mobile View 1](https://frontend.turing.io/projects/module-1/assets/ideabox-group/mobile.jpg)
+![Mobile View 2](https://frontend.turing.io/projects/module-1/assets/ideabox-group/mobile-dropdown.jpg)
+
