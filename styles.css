@@ -68,7 +68,6 @@ label {
   font-family: 'Open Sans';
   font-size: 15px;
   font-weight: bold;
-  height: 38px;
   letter-spacing: 1.2px;
   margin: 2px;
   margin-bottom: 25px;
@@ -273,9 +272,12 @@ label {
   .form-grid {
     display: block;
   }
+  .show-starred {
+  font-size: 11px;
+  }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450git stpx) {
   body {
     flex-direction: column;
   }
@@ -309,6 +311,9 @@ label {
     display: none;
   }
   .idea-form-grid {
+    display: block;
+  }
+  .idea-cards-grid {
     grid-template-columns: repeat(1, 1fr);
   }
   .bottom-menu-4 {
