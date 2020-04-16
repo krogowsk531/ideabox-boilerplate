@@ -12,9 +12,7 @@ class Idea {
 
 
 // should only have one job which is to save the instance to storage
-  saveToStorage() {
 
-  }
     //take obj and save to local saveToStorage
     // use window.localStorage.setItem(keyword to save the item), JSON.stringify(item to save).
 
